@@ -10,9 +10,9 @@ import Foundation
 struct Animation {
     var preset: String
     var curve: String
-    var force: Int
-    var duration: Int
-    var delay = 1
+    var force: Double
+    var duration: Double
+    var delay = 1.0
 }
 
 extension Animation {
@@ -23,7 +23,7 @@ extension Animation {
         let curveType = animationData.curveList.randomElement() ?? ""
         
         
-        let animation = Animation(preset: animationType, curve: curveType, force: Int.random(in: 0...1), duration: Int.random(in: 0...1))
+        let animation = Animation(preset: animationType, curve: curveType, force: Double.random(in: 0...1), duration: Double.random(in: 0...1))
         return animation
     }
 }

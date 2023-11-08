@@ -45,9 +45,9 @@ class ViewController: UIViewController {
     private func presentViewAnimation() {
         mainView.animation = animation.preset
         mainView.curve = animation.curve
-        mainView.force = CGFloat(animation.force)
-        mainView.duration = CGFloat(animation.duration)
-        mainView.delay = CGFloat(animation.delay)
+        mainView.force = (animation.force)
+        mainView.duration = (animation.duration)
+        mainView.delay = (animation.delay)
         
         mainView.animate()
     }
