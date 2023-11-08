@@ -8,11 +8,11 @@
 import Foundation
 
 struct Animation {
-    var preset: String
-    var curve: String
-    var force: Double
-    var duration: Double
-    var delay = 1.0
+    let preset: String
+    let curve: String
+    let force: Double
+    let duration: Double
+    let delay = 1.0
 }
 
 extension Animation {

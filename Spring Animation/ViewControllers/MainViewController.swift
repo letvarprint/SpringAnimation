@@ -8,7 +8,7 @@
 import UIKit
 import SpringAnimation
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     
     var animation = Animation.getAnimation()
     
@@ -33,9 +33,9 @@ class ViewController: UIViewController {
         presentViewAnimation()
         presetLabel.text = animation.preset
         curveLabel.text = animation.curve
-        forceLabel.text = String(animation.force)
-        durationLabel.text = String(animation.duration)
-        delayLabel.text = String(animation.delay)
+        forceLabel.text = convertToString(number: animation.force)
+        durationLabel.text = convertToString(number: animation.duration)
+        delayLabel.text = convertToString(number: animation.delay)
         animation = Animation.getAnimation()
         mainButton.setTitle(animation.preset, for: .normal)
         
@@ -50,5 +50,9 @@ class ViewController: UIViewController {
         mainView.delay = (animation.delay)
         
         mainView.animate()
+    }
+    
+    private func convertToString(number: Double) -> String {
+        String(format: "%.2f", number)
     }
 }
